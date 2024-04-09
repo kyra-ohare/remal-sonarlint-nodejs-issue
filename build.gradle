@@ -1,0 +1,44 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id "name.remal.sonarlint" version "3.4.9"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+// These are my attempts to ignore html files.
+sonarLint {
+//	sonarProperty("sonar.exclusions", "**/*.html")
+//	sonarProperty("sonar.exclusions", "**/*.html")
+//	sonarProperty("sonar.exclusions", "**.html")
+//	sonarProperty("sonar.exclusions", "*.html")
+//	sonarProperty("sonar.exclusions", "**/*in.html")
+//	sonarProperty("sonar.exclusions", "./src/main/resources/templates/login.html")
+
+//	ignoredPaths.add("**/*.html")
+//	ignoredPaths.add("**/**.html")
+//	ignoredPaths.add("**.html")
+//	ignoredPaths.add("*.html")
+//	ignoredPaths.add("**/*in.html")
+	ignoredPaths.add("./src/main/resources/templates/login.html")
+}
