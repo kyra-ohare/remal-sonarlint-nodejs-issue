@@ -28,6 +28,9 @@ tasks.named('test') {
 
 // These are my attempts to ignore html files.
 sonarLint {
+        languages {
+            exclude('html')
+        }
 //	sonarProperty("sonar.exclusions", "**/*.html")
 //	sonarProperty("sonar.exclusions", "**/*.html")
 //	sonarProperty("sonar.exclusions", "**.html")

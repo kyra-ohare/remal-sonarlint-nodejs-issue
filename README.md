@@ -9,3 +9,5 @@ Error while running Node.js. A supported version of Node.js is required for runn
 ```
 
 A number of attempts were given. Please see [build.gradle](./build.gradle) line 29.
+
+Version 4.0.0 offers a fix: https://github.com/remal-gradle-plugins/sonarlint/issues/319#issuecomment-2052504880
