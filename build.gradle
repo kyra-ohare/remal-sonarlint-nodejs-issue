@@ -43,5 +43,5 @@ sonarLint {
 //	ignoredPaths.add("**.html")
 //	ignoredPaths.add("*.html")
 //	ignoredPaths.add("**/*in.html")
-	ignoredPaths.add("./src/main/resources/templates/login.html")
+//	ignoredPaths.add("./src/main/resources/templates/login.html")
 }
